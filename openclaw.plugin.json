@@ -1,0 +1,26 @@
+{
+  "id": "simple-memory",
+  "name": "Simple Memory",
+  "description": "Simple Memory is in-memory.",
+  "version": "0.1.0",
+  "kind": "memory",
+  "contracts": {
+    "tools": [
+      "memory_search",
+      "memory_get"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "dataFile": {
+        "type": "string",
+        "description": "Path to the JSON memory file. Relative paths are resolved through OpenClaw's plugin path resolver."
+      }
+    }
+  },
+  "activation": {
+    "onStartup": true
+  }
+}
